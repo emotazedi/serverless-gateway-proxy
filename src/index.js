@@ -10,7 +10,7 @@ class ServerlessPlugin {
         usage: 'Helps you start your first Serverless plugin',
         lifecycleEvents: [
           'hello',
-          'world',
+          'world'
         ],
         options: {
           message: {
@@ -18,17 +18,17 @@ class ServerlessPlugin {
               'Specify the message you want to deploy '
               + '(e.g. "--message \'My Message\'" or "-m \'My Message\'")',
             required: true,
-            shortcut: 'm',
-          },
-        },
-      },
+            shortcut: 'm'
+          }
+        }
+      }
     };
 
     this.hooks = {
       'before:welcome:hello': this.beforeWelcome.bind(this),
       'welcome:hello': this.welcomeUser.bind(this),
       'welcome:world': this.displayHelloMessage.bind(this),
-      'after:welcome:world': this.afterHelloWorld.bind(this),
+      'after:welcome:world': this.afterHelloWorld.bind(this)
     };
   }
 
