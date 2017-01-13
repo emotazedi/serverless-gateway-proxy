@@ -33,6 +33,7 @@ class ServerlessPlugin {
   }
 
   beforeWelcome() {
+    console.log('Testing before welcom');
     this.serverless.cli.log('Hello from Serverless!');
   }
 
